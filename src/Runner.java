@@ -10,13 +10,13 @@ public class Runner extends RouletteClass{
         int balance = 100;
         int bet = 0;
         int gameDecision=0;
-        String exit = null;
+        int exit = 6;
         String innerExit = null;
 
         System.out.println("!!! Casinoya hoş geldiniz !!!");
         String welcome = "Bakiyeniz 100$ olup 1000$ da bitmektedir\n"+
                 "Casinodan çıkmak için ya 1000$ kazanmalısınız yada batmalısınız\n"+
-                "Rulet oynamak için '1' Baccarat oynamak için '2' yi tercih ediniz 500Wheel için ise '3' ü tercih ediniz";
+                "Rulet oynamak için '1' Baccarat oynamak için '2' yi tercih ediniz 500Wheel için '3' Hilo oynamak için '4' ü tercih ediniz";
         String welcomeRulet ="Oyun seçenekleriniz aşağıda gösterilen şekildedir\n"+
                 "1------> 0-36 arası sayı tahmini\n"+
                 "2------> 1-12 , 13-24 , 25-36 Sayıları arasında 1,2 ve 3 olan alanlardan tahmin etmek \n"+
@@ -182,7 +182,7 @@ public class Runner extends RouletteClass{
 
 
                 }
-            }/*else if (gameDecision==4){
+            }else if (gameDecision==4){
                 while (game.balance> 0 && game.balance<=200){
                     System.out.println("");
                     System.out.println("");
@@ -196,14 +196,14 @@ public class Runner extends RouletteClass{
                     }
 
                 }
-            }*/
+            }
 
-            System.out.println("Programdan Çıkmak için 'Çıkış' Yazınız" + "Rulet oynamak için '1' Baccarat oynamak için '2' yi tercih ediniz 500Wheel için ise '3' ü tercih ediniz");
+            System.out.println("Programdan Çıkmak için '5' " + "Hilo oynamak için '4' "+"Rulet oynamak için '1' Baccarat oynamak için '2' yi tercih ediniz 500Wheel için ise '3' ü tercih ediniz");
             gameDecision = scanner.nextInt();
-            exit = scanner.next();
 
 
-        }while (!exit.equalsIgnoreCase("çıkış"));
+
+        }while (!(gameDecision==5));
 
         System.out.println("Programdan Çıkış Yapılıyor İyi Günler Dileriz....");
         Thread.sleep(2000);
